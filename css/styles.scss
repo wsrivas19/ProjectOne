@@ -1,23 +1,12 @@
+@import "variables";
+@import "mixins";
 
-// Color Variables
-
-$navyBlue: #25274D;
-$lightNavy: #464866;
-$blueGrey: #AAABB8;
-$cyanBlue: #2E9CCA;
-$blueGreen: #29648A;
-
-//Font Size
-$bannerHeading: 48px;
-$titleFont: 48px;
-$buttonsFont: 24px;
-$bodyFont: 16px;
 
 .row{
   font-family: 'Lato', sans-serif;
 }
 body, html {
-  height: 125%;
+  height: 100%;
   margin: 0;
   background-color: $blueGrey;
   padding-bottom: 0;  
@@ -25,21 +14,30 @@ body, html {
 
 // Navigation Bar
 
+// .topnav{
+//   padding: 20px;
+//   background-color: $navyBlue;
+// }
+
 .navbar{
     width: 100%;
     margin:0;
     background: $navyBlue;
     padding: 5px;
     border-radius: 0px;
+    // overflow: hidden;
+    
 }
 .navbar a {
+    font-size: 12px;
     color: $blueGrey;
-    text-decoration: none;
+    // text-decoration: none;
     font-family: 'Lato', sans-serif;
-    padding:  14px 16px 14px;
+    padding:  10px 14px 10px;
     position: relative;
     text-align: center;
     float: right;
+    // display: block;
     &:hover {
       background: lighten( $navyBlue, 7);
     }
@@ -47,7 +45,7 @@ body, html {
 #logo{
 font-size: 32px;
 font-family: "Futura";
-color:$blueGrey;
+color:white;
 line-height: 1.016;
 position: absolute;
 left: 20px;
@@ -64,18 +62,39 @@ top: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
- display: flex; justify-content: center;
+ display: flex; 
+ justify-content: center;
 }
 
+#about-image {
+  padding: 40px;
+  height: 50vh;
+  width:100%;
+  background-image: url("loginphoto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ display: flex; 
+ justify-content: center;
+}
 .container-fluid {
   margin: 0;
   padding: 0;
 }
-
+.container{
+  height: 100%;
+  width: 100%;
+}
 
 .wrapper{
   background-color: $navyBlue;
   height: 50vh;
+
+}
+.wrapper1{
+  background-color: $blueGrey;
+  height: 50vh;
+  padding: 40px;
 }
 
 .wrapper-container{
@@ -85,14 +104,14 @@ top: 10px;
   margin-top: 15%;
   margin-bottom: 15%;
   margin-left: 25%;
- padding: 20px;
+ padding: 40px;
   text-align: center;
 }
-
 .box{
   margin-top: 25%;
   margin-bottom: 25%;
   margin-left: 35%;
+  margin-right: 35%;
 }
 
 h1{
@@ -104,11 +123,7 @@ h1{
 .title{
   text-align: center;
   .button1{
-    font-family: 'Lato', sans-serif;
-    background-color: $cyanBlue;
-    color: white;
-    font-size: 16px;
-    padding: 12px 28px;
+    @include button;
     border-radius: 4px;
     margin-left: auto;
     margin-right: auto;
@@ -123,59 +138,74 @@ h2{
   color: white;
     text-decoration: none;
     font-family: 'Lato', sans-serif;
-    font-size: 24px; 
+    font-size: $bodyFont; 
+   
 }
 
 h3{
-  
   font-size: 32px;
+}
+h4{
+  font-size: 16px;
+  color: white;
 }
 
 .button2{
-  font-family: 'Lato', sans-serif;
-  background-color: $cyanBlue;
-  color: white;
-  font-size: 16px;
-  padding: 12px 28px;
+  @include button;
   border-radius: 4px;
- 
     &:hover {
       background: lighten( $cyanBlue, 7);
     }
     
 }
-
 #services{
     color:$navyBlue;
     font-size: 32px;
     text-align: center;
 }
+.section{
+  background-color: $blueGrey;
+  height: 50vh;
+}
 
 //Footer
 
 footer {
-   bottom:0;
-   left: 0;
-   right: 0;
-   position: fixed;
-   width:100%;
-  background-color: #2a2a2a;
+  width:100%;
+  background-color: $darkGrey;
   padding: 10px;
   text-align: center;
   color: white;
+  
+ 
 }
  
 
  .button6 {
-  font-family: 'Lato', sans-serif;
-  background-color: #2a2a2a;
-  color: white;
-  font-size: 10px;
-  padding: 10px 28px;
+ @include button;
+ background-color: $darkGrey;
+ font-size: 14px;
   border: none;
- 
   &:hover {
-    background: lighten( #2a2a2a, 7);
+    background: lighten( $darkGrey, 7);
   }
  }
+
+ #submitBtn{
+   @include button;
+   border-radius: 4px;
+   margin: 20px;
+ }
+
+ #logSubmit{
+  @include button;
+  border-radius: 4px;
+  margin: 20px;
  
+ }
+ 
+.table  {
+   font-size: 16px;
+   color: $navyBlue;
+   
+ }

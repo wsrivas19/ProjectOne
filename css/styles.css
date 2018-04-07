@@ -2,7 +2,7 @@
   font-family: 'Lato', sans-serif; }
 
 body, html {
-  height: 125%;
+  height: 100%;
   margin: 0;
   background-color: #AAABB8;
   padding-bottom: 0; }
@@ -15,10 +15,10 @@ body, html {
   border-radius: 0px; }
 
 .navbar a {
+  font-size: 12px;
   color: #AAABB8;
-  text-decoration: none;
   font-family: 'Lato', sans-serif;
-  padding: 14px 16px 14px;
+  padding: 10px 14px 10px;
   position: relative;
   text-align: center;
   float: right; }
@@ -28,7 +28,7 @@ body, html {
 #logo {
   font-size: 32px;
   font-family: "Futura";
-  color: #AAABB8;
+  color: white;
   line-height: 1.016;
   position: absolute;
   left: 20px;
@@ -49,13 +49,37 @@ body, html {
   -ms-flex-pack: center;
   justify-content: center; }
 
+#about-image {
+  padding: 40px;
+  height: 50vh;
+  width: 100%;
+  background-image: url("loginphoto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 .container-fluid {
   margin: 0;
   padding: 0; }
 
+.container {
+  height: 100%;
+  width: 100%; }
+
 .wrapper {
   background-color: #25274D;
   height: 50vh; }
+
+.wrapper1 {
+  background-color: #AAABB8;
+  height: 50vh;
+  padding: 40px; }
 
 .wrapper-container {
   background-color: #25274D;
@@ -64,13 +88,14 @@ body, html {
   margin-top: 15%;
   margin-bottom: 15%;
   margin-left: 25%;
-  padding: 20px;
+  padding: 40px;
   text-align: center; }
 
 .box {
   margin-top: 25%;
   margin-bottom: 25%;
-  margin-left: 35%; }
+  margin-left: 35%;
+  margin-right: 35%; }
 
 h1 {
   color: white;
@@ -85,7 +110,7 @@ h1 {
     background-color: #2E9CCA;
     color: white;
     font-size: 16px;
-    padding: 12px 28px;
+    padding: 12px 12px;
     border-radius: 4px;
     margin-left: auto;
     margin-right: auto; }
@@ -101,12 +126,16 @@ h2 {
 h3 {
   font-size: 32px; }
 
+h4 {
+  font-size: 16px;
+  color: white; }
+
 .button2 {
   font-family: 'Lato', sans-serif;
   background-color: #2E9CCA;
   color: white;
   font-size: 16px;
-  padding: 12px 28px;
+  padding: 12px 12px;
   border-radius: 4px; }
   .button2:hover {
     background: #47abd5; }
@@ -116,11 +145,11 @@ h3 {
   font-size: 32px;
   text-align: center; }
 
+.section {
+  background-color: #AAABB8;
+  height: 50vh; }
+
 footer {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
   width: 100%;
   background-color: #2a2a2a;
   padding: 10px;
@@ -129,10 +158,34 @@ footer {
 
 .button6 {
   font-family: 'Lato', sans-serif;
-  background-color: #2a2a2a;
+  background-color: #2E9CCA;
   color: white;
-  font-size: 10px;
-  padding: 10px 28px;
+  font-size: 16px;
+  padding: 12px 12px;
+  background-color: #2a2a2a;
+  font-size: 14px;
   border: none; }
   .button6:hover {
     background: #3c3c3c; }
+
+#submitBtn {
+  font-family: 'Lato', sans-serif;
+  background-color: #2E9CCA;
+  color: white;
+  font-size: 16px;
+  padding: 12px 12px;
+  border-radius: 4px;
+  margin: 20px; }
+
+#logSubmit {
+  font-family: 'Lato', sans-serif;
+  background-color: #2E9CCA;
+  color: white;
+  font-size: 16px;
+  padding: 12px 12px;
+  border-radius: 4px;
+  margin: 20px; }
+
+.table {
+  font-size: 16px;
+  color: #25274D; }
